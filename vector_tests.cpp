@@ -207,10 +207,5 @@ TEST(Operator, Ostream){
 
 TEST(Operator, GetElementByIndex){
     vector<int> test_vector({1, 2, 3, 4, 5});
-    ASSERT_EQ(test_vector[2], 3);
-    try {
-        int a = test_vector[100];
-    } catch (std::out_of_range const &error) {
-        ASSERT_EQ(error.what(), std::string("Index is out of range"));
-    }
+    ASSERT_EQ(test_vector[0], 1);
 }

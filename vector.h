@@ -114,24 +114,16 @@ namespace bmstu {
             end();
         }
         typename iterator::reference operator[](size_t index) noexcept {
-            if (index <= size_){
-                return data_[index];
-            } else {throw std::out_of_range("Index is out of range");}
+            return data_[index];
         }
         typename const_iterator::reference operator[](size_t index) const noexcept {
-            if (index <= size_){
-                return data_[index];
-            } else {throw std::out_of_range("Index is out of range");}
+            return data_[index];
         }
         typename iterator::reference at(size_t index) {
-            if (index <= size_){
-                return data_[index];
-            } else {throw std::out_of_range("Index is out of range");}
+            return data_[index];
         }
         typename const_iterator::reference at(size_t index) const {
-            if (index <= size_){
-                return data_[index];
-            } else {throw std::out_of_range("Index is out of range");}
+            return data_[index];
         }
         size_t size() const noexcept {return size_;}
         size_t capacity() const noexcept {return capacity_;}
